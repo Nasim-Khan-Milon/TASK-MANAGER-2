@@ -1,13 +1,12 @@
-# 🚀 Advanced Task Manager API (Profile-Based)
+# Advanced Task Manager API (Profile-Based)
 
 This project is a **backend-only Task Manager API** where users can create and manage their own tasks, and admins can control the whole system.
 It’s built using **Node.js, Express, MySQL**, and **JWT authentication**, following a clean **MVC structure**.
 
 The main goal of this project is to show how authentication, authorization, and database integration work together in a real-world backend.
 
----
 
-## 📌 What This Project Does
+##  What This Project Does
 
 * Users can register and log in securely
 * Each user can create, update, and delete **their own tasks only**
@@ -15,9 +14,8 @@ The main goal of this project is to show how authentication, authorization, and 
 * All data is stored in a **MySQL database (using raw queries)**
 * Authentication is handled using **JWT tokens**
 
----
 
-## 🔐 Authentication & Security
+## uthentication & Security
 
 * Passwords are hashed using **bcrypt**
 * Login returns:
@@ -27,18 +25,17 @@ The main goal of this project is to show how authentication, authorization, and 
 * Users stay logged in using refresh tokens
 * Logout removes the stored refresh token
 
----
 
-## 👤 Roles (Authorization)
+## Roles (Authorization)
 
 There are two roles in the system:
 
-### 🧑 User
+### User
 
 * Can manage only their own tasks
 * Cannot access other users' data
 
-### 👑 Admin
+### Admin
 
 * Can view all users
 * Can view all tasks
@@ -47,7 +44,7 @@ There are two roles in the system:
 
 ---
 
-## 📋 Task Features
+## Task Features
 
 * Create task
 * Get all tasks (only your own)
@@ -55,7 +52,7 @@ There are two roles in the system:
 * Delete task
 * Get single task
 
-### 🔎 Extra Features
+### Extra Features
 
 * Search tasks by keyword
 * Filter by status: `Pending`, `Ongoing`, `Complete`
@@ -64,7 +61,7 @@ There are two roles in the system:
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 TASK-MANAGER-2/
@@ -94,9 +91,8 @@ TASK-MANAGER-2/
 ├── package.json
 ```
 
----
 
-## ⚙️ Technologies Used
+## Technologies Used
 
 * Node.js
 * Express.js
@@ -104,9 +100,8 @@ TASK-MANAGER-2/
 * jsonwebtoken (JWT)
 * bcrypt
 
----
 
-## 🗄️ Database Design
+## Database Design
 
 ### Users Table
 
@@ -126,9 +121,8 @@ TASK-MANAGER-2/
 * user_id (linked to user)
 * created_at
 
----
 
-## 🔧 How to Run This Project
+## How to Run This Project
 
 ### 1. Clone the project
 
@@ -161,7 +155,6 @@ ACCESS_SECRET=your_access_secret
 REFRESH_SECRET=your_refresh_secret
 ```
 
----
 
 ### 4. Setup database
 
@@ -174,7 +167,6 @@ USE task_manager;
 
 Then create tables (users & tasks).
 
----
 
 ### 5. Start server
 
@@ -188,20 +180,18 @@ Server will run at:
 http://localhost:3000
 ```
 
----
 
-## 📡 API Overview
+## API Overview
 
-### 🔐 Auth
+### Auth
 
 * `POST /auth/register` → register user
 * `POST /auth/login` → login
 * `POST /auth/refresh` → get new access token
 * `POST /auth/logout` → logout
 
----
 
-### 📋 Tasks (Protected)
+### Tasks (Protected)
 
 * `POST /tasks` → create task
 * `GET /tasks` → get your tasks
@@ -209,18 +199,16 @@ http://localhost:3000
 * `PUT /tasks/:id` → update
 * `DELETE /tasks/:id` → delete
 
----
 
-### 👑 Admin (Protected)
+### Admin (Protected)
 
 * `GET /admin/users` → all users
 * `GET /admin/tasks` → all tasks
 * `DELETE /admin/tasks/:id` → delete any task
 * `PUT /admin/make-admin/:id` → promote user
 
----
 
-## 🧪 Testing
+## Testing
 
 You can test all APIs using Postman.
 
@@ -230,18 +218,16 @@ For protected routes, send token like:
 Authorization: Bearer <access_token>
 ```
 
----
 
-## 🔐 Security Notes
+## Security Notes
 
 * Passwords are never stored as plain text
 * Tokens expire automatically
 * Only authenticated users can access protected routes
 * Role-based access is enforced
 
----
 
-## 📈 Possible Improvements
+## Possible Improvements
 
 * Email verification (OTP)
 * Password reset system
@@ -249,14 +235,12 @@ Authorization: Bearer <access_token>
 * Rate limiting
 * Deployment with Docker
 
----
 
-## 👨‍💻 Author
+## Author
 
 MD. NASIM KHAN MILON
 
----
 
-## 📜 Note
+## Note
 
 This project is created for learning purposes and backend practice.
