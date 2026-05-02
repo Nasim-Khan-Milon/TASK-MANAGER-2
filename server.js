@@ -13,6 +13,7 @@ app.get("/", (req, res) => {
 
 app.use("/auth", require("./routes/authRoutes"));
 app.use("/tasks", require("./routes/taskRoutes"));
+app.use("/admin", require("./routes/adminRoutes"));
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
