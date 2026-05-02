@@ -1,5 +1,4 @@
 # Advanced Task Manager API (Profile-Based)
-
 This project is a **backend-only Task Manager API** where users can create and manage their own tasks, and admins can control the whole system.
 It’s built using **Node.js, Express, MySQL**, and **JWT authentication**, following a clean **MVC structure**.
 
@@ -7,7 +6,6 @@ The main goal of this project is to show how authentication, authorization, and 
 
 
 ##  What This Project Does
-
 * Users can register and log in securely
 * Each user can create, update, and delete **their own tasks only**
 * Admins have extra power (like viewing all users and tasks)
@@ -15,8 +13,7 @@ The main goal of this project is to show how authentication, authorization, and 
 * Authentication is handled using **JWT tokens**
 
 
-## uthentication & Security
-
+## Authentication & Security
 * Passwords are hashed using **bcrypt**
 * Login returns:
 
@@ -27,25 +24,20 @@ The main goal of this project is to show how authentication, authorization, and 
 
 
 ## Roles (Authorization)
-
 There are two roles in the system:
 
 ### User
-
 * Can manage only their own tasks
 * Cannot access other users' data
 
 ### Admin
-
 * Can view all users
 * Can view all tasks
 * Can delete any task
 * Can promote other users to admin
 
----
 
 ## Task Features
-
 * Create task
 * Get all tasks (only your own)
 * Update task
@@ -53,16 +45,13 @@ There are two roles in the system:
 * Get single task
 
 ### Extra Features
-
 * Search tasks by keyword
 * Filter by status: `Pending`, `Ongoing`, `Complete`
 * Pagination (limit & page)
 * Latest tasks first (sorting)
 
----
 
 ## Project Structure
-
 ```
 TASK-MANAGER-2/
 │
@@ -93,7 +82,6 @@ TASK-MANAGER-2/
 
 
 ## Technologies Used
-
 * Node.js
 * Express.js
 * MySQL (mysql2/promise)
@@ -104,7 +92,6 @@ TASK-MANAGER-2/
 ## Database Design
 
 ### Users Table
-
 * id
 * username (unique)
 * email (unique)
@@ -209,7 +196,6 @@ http://localhost:3000
 
 
 ## Testing
-
 You can test all APIs using Postman.
 
 For protected routes, send token like:
@@ -220,7 +206,6 @@ Authorization: Bearer <access_token>
 
 
 ## Security Notes
-
 * Passwords are never stored as plain text
 * Tokens expire automatically
 * Only authenticated users can access protected routes
@@ -228,7 +213,6 @@ Authorization: Bearer <access_token>
 
 
 ## Possible Improvements
-
 * Email verification (OTP)
 * Password reset system
 * API documentation (Swagger)
@@ -237,10 +221,8 @@ Authorization: Bearer <access_token>
 
 
 ## Author
-
 MD. NASIM KHAN MILON
 
 
 ## Note
-
 This project is created for learning purposes and backend practice.
