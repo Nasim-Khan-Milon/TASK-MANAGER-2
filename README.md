@@ -158,7 +158,7 @@ Then create tables (users & tasks).
 ### 5. Start server
 
 ```
-node app.js
+nodemon server.js
 ```
 
 Server will run at:
